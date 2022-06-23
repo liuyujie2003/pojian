@@ -1,0 +1,43 @@
+<view class="bg-image">
+	<view class="perspective">
+		<view class="book-wrap" wx:if="{{ showBook }}" bindtap="openBook">
+		<!-- <view class="book-wrap"> -->
+      <!-- 书本内容 -->
+			<view class="page book-content">
+				<view class="cont">
+					<view class="icon-box icon-top-left"><i></i></view>
+					<view class="icon-box icon-top-right"><i></i></view>
+					<view class="icon-box icon-btm-left"><i></i></view>
+					<view class="icon-box icon-btm-right"><i></i></view>
+					<view class="app">
+						<view class="box">
+							<view class="box-view-first">
+								<view>{{ answer }}</view>
+								<view class="again-btn" id="again" bindtap="collectBooks">点击下方关闭</view>
+							</view>
+						</view>
+						<i class="circle top-left"></i>
+						<i class="circle top-right"></i>
+						<i class="circle btm-left"></i>
+						<i class="circle btm-right"></i>
+					</view>
+				</view>
+			</view>
+      <!-- 封面，打开封面 -->
+			<view class="page {{ bookStatus }}"></view>
+		</view>
+	</view>
+	<view wx:if="{{ showTip }}" class="tips animated_opacity" bindtap="hideTip">
+		<view class="tip-wrap">
+			<view class="tip-box">
+				<view class="tip-box">
+					<text  selectable >请在心里思考一个想知道答案的问题，点我关闭。点击书本开始占卜....</text>
+				</view>
+			</view>
+		</view>
+	</view>
+  <view class="hidden-btn">
+    <view class="mini-btn" id="collect" bindtap="collectBooks">{{collectBook}}
+		</view>
+  </view>
+</view>

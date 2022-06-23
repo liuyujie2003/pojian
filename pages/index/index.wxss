@@ -1,0 +1,404 @@
+.bg-image {
+  background-image: url(https://s2.loli.net/2022/06/12/8t56V4ipzahJl9M.jpg);
+  background-repeat: round;
+  background-size: cover;
+  height: 100vh;
+}
+
+.cont {
+  background: aliceblue;
+  overflow: auto;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  position: relative;
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  position: absolute;
+  overflow: hidden;
+}
+
+.icon-top-left {
+  left: 0;
+  top: 0;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 10px 0 0 0;
+}
+
+.icon-top-right {
+  right: 0;
+  top: 0;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 0 10px 0 0;
+}
+
+.icon-btm-left {
+  left: 0;
+  bottom: 0;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-radius: 0 0 0 10px;
+}
+
+.icon-btm-right {
+  right: 0;
+  bottom: 0;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-radius: 0 0 10px 0;
+}
+
+.icon-box i {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: absolute;
+  z-index: 2;
+}
+
+.icon-top-left i {
+  left: -2px;
+  top: -2px;
+}
+
+.icon-top-right i {
+  right: -2px;
+  top: -2px;
+}
+
+.icon-btm-left i {
+  left: -2px;
+  bottom: -2px;
+}
+
+.icon-btm-right i {
+  right: -2px;
+  bottom: -2px;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 5px 7px 7px 6px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.circle {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  position: absolute;
+  background: #fff;
+}
+
+.top-left {
+  left: 6px;
+  top: 5px;
+  border-right-color: black;
+  border-bottom-color: black;
+  border-radius: 0 0 20px 0;
+}
+
+.top-right {
+  right: 3px;
+  top: 5px;
+  border-left-color: black;
+  border-bottom-color: black;
+  border-radius: 0 0 0 20px;
+}
+
+.btm-left {
+  left: 6px;
+  bottom: 3px;
+  border-right-color: black;
+  border-top-color: black;
+  border-radius: 0 20px 0 0;
+}
+
+.btm-right {
+  right: 3px;
+  bottom: 3px;
+  border-left-color: black;
+  border-top-color: black;
+  border-radius: 20px 0 0 0;
+}
+
+.box-view-first {
+  display: block;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+}
+
+/* ***************************** 翻书效果 ***************************** */
+.perspective {
+  perspective: 800px;
+  transform-style: preserve-3d;
+  position: absolute;
+  animation: move-up 5s;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: 25vh;
+}
+
+@keyframes move-up {
+  0% {
+    top: 300px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+.book-wrap {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 0 auto;
+  transform: rotateX(30deg);
+  transform-style: preserve-3d;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  transform-origin: left;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+/* 关闭书本，关闭的动作 */
+.book-cover-close-action {
+  background-image: url(https://s2.loli.net/2022/06/12/Ek1NXeIbr5zOhcP.jpg);
+  background-size: 95%;
+  transform: rotateY(-180deg);
+  animation-name: roll-close;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-play-state: running;
+}
+
+/* 关闭书本，关闭的状态 */
+.book-cover-close-status {
+  background-image: url(https://s2.loli.net/2022/06/12/Ek1NXeIbr5zOhcP.jpg);
+  background-size: 95%;
+  transform: rotateY(0);
+}
+
+/* 打开书本，打开的动作 */
+.book-cover-open-action {
+  background-image: url(https://s2.loli.net/2022/06/12/Ek1NXeIbr5zOhcP.jpg);
+  background-size: 95%;
+  animation-name: roll-open;
+  animation-duration: 15s;
+  animation-delay: 2s;
+  animation-play-state: running;
+}
+
+/* 打开书本，打开的状态 */
+.book-cover-open-status {
+  background-image: url url(https://s2.loli.net/2022/06/12/Ek1NXeIbr5zOhcP.jpg);
+  background-size: 95%;
+  transform: rotateY(-180deg);
+}
+
+.book-content {
+  background-color: #fff;
+  color: #33363C;
+}
+
+@keyframes roll-open {
+  from {
+    transform: rotateY(0);
+  }
+
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes roll-close {
+  from {
+    transform: rotateY(-180deg);
+  }
+
+  to {
+    transform: rotateY(0);
+  }
+}
+
+.hidden-btn {
+  z-index: 1;
+  color: #8f88cf;
+  width: 20%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+/* ****************** collect 按钮 ********************* */
+.mini-btn {
+  position: relative;
+  background: #dcbde0c9;
+  border: none;
+  padding: 0px 12px;
+  font-size: 1.4rem;
+  outline: none;
+  display: flex;
+  text-align: center;
+  border-radius: 20px;
+}
+
+
+
+
+.mini-btn:active {
+  background: #447186;
+  top: 3px;
+  left: -3px;
+  box-shadow: -3px 3px 0 hsl(204, 24%, 58%);
+}
+
+.mini-btn:active::before {
+  border: 3px solid transparent;
+  border-right: 3px solid hsl(217, 39%, 65%);
+  border-left-width: 0px;
+  left: -3px;
+}
+
+.mini-btn:active::after
+ {
+  border: 3px solid transparent;
+  border-top: 3px solid hsl(197, 33%, 58%);
+  border-bottom-width: 0px;
+  bottom: -3px;
+}
+
+/* ************************* 再来一卦 按钮*********************** */
+.again-btn {
+  font-size: 1.4rem;
+  position: relative;
+  margin: 40px 40px;
+  color: #dbabcf;
+}
+
+/** ***************************** tip *********************************** */
+.tips {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  position: relative;
+}
+
+.tip-wrap {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 1px 1px 0px rgba(0, 0, 0, .75);
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 38vh;
+}
+
+.tip-box {
+  position: relative;
+  background: rgb(22, 3, 17);
+  border: solid 5px rgb(31, 4, 27);
+  width: 60%;
+  height: 20vh;
+  margin: 0 auto;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  padding: 10px;
+  color: rgba(153, 127, 13, 0.589);
+  box-shadow: 2px 3px 1px rgba(0, 0, 0, .75)
+}
+
+.tip-box .tip-box {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 80%;
+  height: 17vh;
+  border-color: rgba(153, 127, 13, 0.589);
+  box-shadow: none;
+}
+
+/* 逐渐隐藏 */
+.animated_opacity {
+  /* font-weight: bold;
+  opacity: 1;
+  filter: Alpha(opacity=100); */
+  transition: opacity 2s;
+}
+
+.animated_opacity:hover {
+  opacity: 0;
+  filter: Alpha(opacity=0)
+}
+
+/* ************************ 音乐图标以及旋转 ********************** */
+.music-icon {
+  padding-top: 60px;
+  color: red;
+  float: right;
+  padding-right: 40px;
+}
+
+.xuanzhuan {
+  -webkit-transform: rotate(360deg);
+  animation: rotation 6s linear infinite;
+  -moz-animation: rotation 6s linear infinite;
+  -webkit-animation: rotation 6s linear infinite;
+  -o-animation: rotation 6s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* ******************* 音乐图标上的斜杠 ****************** */
+.slopingside{
+  height: 0px;
+  border: 1px solid #f7f7f7;
+  width: 20px;
+  transform: rotate(220deg);
+  -o-transform: rotate(220deg);
+  -moz-transform: rotate(220deg);
+  -webkit-transform: rotate(220deg);
+  margin-top: -21px;
+  margin-left: 5px;
+}
